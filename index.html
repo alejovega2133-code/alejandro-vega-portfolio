@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alejandro Vega | Video Editor & Post-Production Specialist</title>
+  <meta name="description" content="Portfolio of Alejandro Vega — video editor and post-production specialist with experience in commercials, corporate video, motion graphics, aerial footage and brand content with Render Producción Audiovisual."/>
+  <meta property="og:title" content="Alejandro Vega | Portfolio"/>
+  <meta property="og:description" content="Video editor and post-production specialist. Commercials, corporate video, motion graphics, aerial footage and brand content."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://render.co/wp-content/uploads/2020/05/tomas-aereas-cartagena-500x500.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--bg:#080808;--surface:#101010;--surface2:#181818;--gold:#c9a84c;--gold2:#e8c97a;--text:#f2ede4;--muted:#8a837a;--border:#1f1f1f}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+    body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 56px;display:flex;justify-content:flex-end;align-items:center;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+    nav.scrolled{background:rgba(8,8,8,.94);backdrop-filter:blur(14px);border-color:var(--border)}
+    .nav-links{display:flex;gap:36px;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+
+    .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:120px 56px 80px;gap:60px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%,rgba(201,168,76,.07) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(201,168,76,.04) 0%,transparent 50%)}
+    .filmstrip{position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--gold) 0 10px,transparent 10px 24px);opacity:.35}
+    .hero-left,.hero-mosaic{position:relative;z-index:2}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.68rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+    .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold)}
+    .rec-dot{width:7px;height:7px;background:#c0392b;border-radius:50%;animation:pulse 1.4s infinite;flex-shrink:0}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+    h1.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,5rem);font-weight:900;line-height:.97;letter-spacing:-.02em;margin-bottom:36px}
+    h1.hero-title .italic{font-style:italic;color:var(--gold)}
+    h1.hero-title .outline{-webkit-text-stroke:1px rgba(242,237,228,.35);color:transparent}
+    h1.hero-title .sub{font-size:.6em;font-style:italic;color:var(--gold2)}
+    .hero-desc{font-size:.92rem;line-height:1.95;color:var(--muted);max-width:480px;margin-bottom:44px}
+    .hero-desc strong{color:var(--text);font-weight:500}
+    .btn-primary{display:inline-flex;align-items:center;gap:14px;padding:14px 30px;background:var(--gold);color:#080808;text-decoration:none;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:background .2s,gap .2s}
+    .btn-primary:hover{background:var(--gold2);gap:22px}
+    .hero-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;height:500px}
+    .mosaic-img{width:100%;height:100%;object-fit:cover;filter:brightness(.78) saturate(.9) contrast(1.02);transition:transform .45s,filter .45s}
+    .mosaic-img:hover{filter:brightness(.92) saturate(1) contrast(1.04);transform:scale(1.02)}
+    .mosaic-img.tall{grid-row:span 2}
+    .company-badge{position:absolute;bottom:-10px;left:-16px;background:rgba(16,16,16,.96);border:1px solid var(--gold);padding:12px 18px;z-index:3}
+    .company-badge-name{font-size:.68rem;font-weight:600;color:var(--gold);letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
+    .company-badge-sub{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+    .marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:var(--surface)}
+    .marquee-track{display:flex;gap:56px;width:max-content;animation:slide 22s linear infinite}
+    @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .m-item{font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:40px}
+    .m-item span{color:var(--gold);font-style:normal;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase}
+
+    section{padding:110px 56px;position:relative;z-index:2}
+    .s-label{font-size:.65rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+    .s-label::before{content:'//'}
+    h2.s-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3.4rem);font-weight:700;line-height:1.1;margin-bottom:60px}
+
+    .portfolio-section{background:var(--bg)}
+    .port-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:stretch}
+    .port-item{position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;display:block;border:none;padding:0;background:none;width:100%;border:1px solid var(--border)}
+    .port-item.wide{grid-column:span 2}
+    .port-thumb{width:100%;height:100%;object-fit:cover;filter:brightness(.62) saturate(.78);transition:transform .6s,filter .6s}
+    .port-item:hover .port-thumb,.port-item:focus .port-thumb{transform:scale(1.05);filter:brightness(.82) saturate(1)}
+    .port-over{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,.94) 0%,rgba(0,0,0,.22) 58%,transparent 100%);opacity:1}
+    .port-cat{font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .port-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:10px;color:var(--text);text-align:left;line-height:1.15}
+    .port-tags{display:flex;gap:5px;flex-wrap:wrap}
+    .port-tag{font-size:.54rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.55)}
+    .port-play{position:absolute;top:18px;right:18px;width:48px;height:48px;border:1.5px solid rgba(255,255,255,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.28)}
+    .more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px;max-height:0;overflow:hidden;transition:max-height .8s cubic-bezier(.4,0,.2,1)}
+    .more-grid.open{max-height:2600px}
+    .view-all-wrap{margin-top:40px;text-align:center}
+    .btn-outline{display:inline-flex;align-items:center;gap:12px;padding:13px 28px;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:.72rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;transition:border-color .2s,color .2s;background:none;cursor:pointer;font-family:'Outfit',sans-serif}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    #toggle-more-icon{transition:transform .4s}
+    #toggle-more-btn.open #toggle-more-icon{transform:rotate(180deg)}
+
+    .tools-section{background:var(--surface)}
+    .tools-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+    .tool-card{background:var(--bg);padding:30px 22px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;transition:background .3s;position:relative}
+    .tool-card:hover{background:var(--surface2)}
+    .tool-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+    .tool-card:hover::after{transform:scaleX(1)}
+    .tool-icon-wrap{width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface2);border:1px solid var(--border)}
+    .tool-name{font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;color:var(--text)}
+    .tool-skills{display:flex;flex-direction:column;gap:6px}
+    .tool-skill{font-size:.67rem;color:var(--muted);display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+    .tool-skill::before{content:'';width:4px;height:4px;min-width:4px;background:var(--gold);border-radius:50%;margin-top:5px}
+
+    .clients-section{background:var(--surface);padding:90px 56px}
+    .clients-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1100px;margin:0 auto}
+    .client-card{background:var(--bg);padding:18px 14px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--border);transition:border-color .25s,background .25s,transform .25s;text-decoration:none;min-height:132px}
+    .client-card:hover{border-color:rgba(201,168,76,.45);background:var(--surface2);transform:translateY(-3px)}
+    .client-logo-wrap{width:100%;height:62px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;padding:10px}
+    .client-logo{max-width:100%;max-height:42px;object-fit:contain}
+    .client-name{font-size:.58rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;line-height:1.3}
+
+    .about-section{background:var(--bg);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .about-img-wrap{position:relative}
+    .about-img-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#1a1200,#0d0d0d);display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:4px}
+    .about-frame{position:absolute;border:1px solid var(--gold);inset:14px -14px -14px 14px;z-index:-1}
+    .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:44px 0}
+    .stat-n{font-family:'Playfair Display',serif;font-size:2.8rem;line-height:1;color:var(--gold)}
+    .stat-l{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+    .about-body{font-size:.92rem;line-height:2;color:var(--muted)}
+    .about-body strong{color:var(--text);font-weight:500}
+
+    .contact-section{background:var(--surface);text-align:center;padding:140px 56px}
+    .contact-big{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,7rem);line-height:1;margin:22px 0 48px}
+    .contact-big em{font-style:italic;color:var(--gold)}
+    .contact-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;align-items:center}
+    .email-link{font-size:.68rem !important;padding:14px 24px !important}
+
+    footer{border-top:1px solid var(--border);padding:28px 56px;display:flex;justify-content:space-between;align-items:center}
+    footer p{font-size:.68rem;color:var(--muted)}
+    .f-strip{height:3px;width:100px;background:repeating-linear-gradient(90deg,var(--border) 0 8px,transparent 8px 16px)}
+
+    .fi{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
+
+    @media(max-width:1100px){
+      .tools-grid{grid-template-columns:repeat(3,1fr)}
+      .clients-grid{grid-template-columns:repeat(4,1fr)}
+    }
+    @media(max-width:900px){
+      nav{padding:18px 24px}
+      .nav-links{display:none}
+      section{padding:80px 24px}
+      .hero{grid-template-columns:1fr;padding:100px 24px 60px}
+      .hero-mosaic{display:none}
+      .tools-grid{grid-template-columns:1fr 1fr}
+      .port-grid,.more-grid{grid-template-columns:1fr}
+      .port-item.wide{grid-column:span 1}
+      .clients-grid{grid-template-columns:repeat(2,1fr)}
+      .about-section{grid-template-columns:1fr}
+      footer{flex-direction:column;gap:12px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<div id="video-modal" onclick="closeModalBg(event)">
+  <div id="video-modal-inner" style="position:relative;width:100%;max-width:960px;aspect-ratio:16/9;background:#000">
+    <button id="video-modal-close" onclick="closeVideo()" style="position:absolute;top:-40px;right:0;background:none;border:none;color:var(--muted);cursor:pointer;font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:6px;transition:color .2s;padding:4px 0">
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M1 1l9 9M10 1L1 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      Close
+    </button>
+    <iframe id="video-modal-iframe" src="" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;border:none"></iframe>
+  </div>
+</div>
+
+<nav id="nav">
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#tools">Skills</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="filmstrip"></div>
+  <div class="hero-left">
+    <p class="hero-eyebrow"><span class="rec-dot"></span>Video Editor & Post-Production</p>
+    <h1 class="hero-title">
+      Alejandro<br>
+      <span class="italic">Vega</span><br>
+      <span class="outline">Post-Production</span><br>
+      <span class="sub">specialist</span>
+    </h1>
+    <p class="hero-desc">
+      Over 3 years editing content for <strong>Render Producción Audiovisual</strong> — TV commercials, corporate video, motion graphics and aerial footage for leading Latin American brands.<br><br>
+      <strong>Premiere Pro · DaVinci Resolve · Shotcut · OpenShot · Lightworks</strong>
+    </p>
+    <a href="#work" class="btn-primary">
+      See my work
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#080808" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="hero-mosaic">
+    <img class="mosaic-img tall" src="https://render.co/wp-content/uploads/2020/05/tomas-aereas-cartagena-500x500.jpg" alt="Aerial landscape production"/>
+    <img class="mosaic-img" src="https://render.co/wp-content/uploads/2020/05/Fondo-Lukafe-500x500.jpg" alt="Product campaign production"/>
+    <img class="mosaic-img" src="https://render.co/wp-content/uploads/2020/05/Fondo-detras-de-camaras-500x500.jpg" alt="Behind the scenes production"/>
+    <div class="company-badge">
+      <div class="company-badge-name">Real projects produced with Render</div>
+      <div class="company-badge-sub">Aerial · Product · BTS</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="m-item">Adobe Premiere Pro <span>✦</span></div><div class="m-item">DaVinci Resolve <span>✦</span></div><div class="m-item">Shotcut <span>✦</span></div><div class="m-item">OpenShot <span>✦</span></div><div class="m-item">Lightworks <span>✦</span></div><div class="m-item">Color Grading <span>✦</span></div><div class="m-item">Motion Graphics <span>✦</span></div><div class="m-item">Corporate Video <span>✦</span></div><div class="m-item">Aerial Footage <span>✦</span></div><div class="m-item">Rotoscoping <span>✦</span></div>
+    <div class="m-item">Adobe Premiere Pro <span>✦</span></div><div class="m-item">DaVinci Resolve <span>✦</span></div><div class="m-item">Shotcut <span>✦</span></div><div class="m-item">OpenShot <span>✦</span></div><div class="m-item">Lightworks <span>✦</span></div><div class="m-item">Color Grading <span>✦</span></div><div class="m-item">Motion Graphics <span>✦</span></div><div class="m-item">Corporate Video <span>✦</span></div><div class="m-item">Aerial Footage <span>✦</span></div><div class="m-item">Rotoscoping <span>✦</span></div>
+  </div>
+</div>
+
+<section class="portfolio-section" id="work">
+  <p class="s-label">Selected Work</p>
+  <h2 class="s-title">Projects with Render</h2>
+  <p style="max-width:760px;color:var(--muted);font-size:.84rem;line-height:1.9;margin:-24px 0 34px;">A curated selection of real work across commercials, aerial content, motion graphics, rotoscoping and corporate communication.</p>
+
+  <div class="port-grid">
+    <button class="port-item wide fi" onclick="openVideo('jhUdFL_fvkU')">
+      <img class="port-thumb" src="https://img.youtube.com/vi/jhUdFL_fvkU/maxresdefault.jpg" alt="Aerial Shots Reel" onerror="this.src='https://render.co/wp-content/uploads/2020/05/tomas-aereas-cartagena-500x500.jpg'"/>
+      <div class="port-over">
+        <p class="port-cat">Aerial · Reel · Premiere Pro</p>
+        <h3 class="port-name">Aerial Shots Reel — Cartagena</h3>
+        <div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">4K Drone</span><span class="port-tag">Color Grade</span></div>
+      </div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('Nzggcmm5Du4')">
+      <img class="port-thumb" src="https://img.youtube.com/vi/Nzggcmm5Du4/maxresdefault.jpg" alt="TV Spot" onerror="this.src='https://render.co/wp-content/uploads/2020/05/1-Aceite-Gourmet-500x500.jpg'"/>
+      <div class="port-over">
+        <p class="port-cat">Commercial · TV Spot</p>
+        <h3 class="port-name">Gourmet Oil — TV Spot</h3>
+        <div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">TV Commercial</span></div>
+      </div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('Y8g_CODA7ZA')">
+      <img class="port-thumb" src="https://img.youtube.com/vi/Y8g_CODA7ZA/maxresdefault.jpg" alt="Motion Graphics" onerror="this.src='https://render.co/wp-content/uploads/2020/05/Fondo-Reel-Motion-Graphics-500x500.jpg'"/>
+      <div class="port-over">
+        <p class="port-cat">Animation · Motion · Shotcut</p>
+        <h3 class="port-name">Motion Graphics Reel</h3>
+        <div class="port-tags"><span class="port-tag">Shotcut</span><span class="port-tag">Motion Graphics</span><span class="port-tag">Animation</span></div>
+      </div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('XvgMfxfo60Y')">
+      <img class="port-thumb" src="https://img.youtube.com/vi/XvgMfxfo60Y/maxresdefault.jpg" alt="Rotoscoping" onerror="this.src='https://render.co/wp-content/uploads/2020/05/Fondo-Bonice-Rotoscopia-500x500.jpg'"/>
+      <div class="port-over">
+        <p class="port-cat">VFX · Rotoscoping · DaVinci</p>
+        <h3 class="port-name">Rotoscoping — Bonice</h3>
+        <div class="port-tags"><span class="port-tag">DaVinci Resolve</span><span class="port-tag">Rotoscoping</span><span class="port-tag">VFX</span></div>
+      </div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('jhUdFL_fvkU')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Fondo-Lukafe-500x500.jpg" alt="Lukafe"/>
+      <div class="port-over"><p class="port-cat">Spot · Product</p><h3 class="port-name">Lukafe — Campaign</h3><div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">Color</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item wide fi" onclick="openVideo('jhUdFL_fvkU')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/4-Reel-Video-Corporativo-500x500.jpg" alt="Corporate Video"/>
+      <div class="port-over">
+        <p class="port-cat">Corporate · Reel</p>
+        <h3 class="port-name">Corporate Video Reel — Latin America</h3>
+        <div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">Color Grading</span><span class="port-tag">Audio Mix</span><span class="port-tag">10 Countries</span></div>
+      </div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+  </div>
+
+  <div class="more-grid" id="more-grid">
+    <button class="port-item fi" onclick="openVideo('XvgMfxfo60Y')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Foto-Himnos-500x500.jpg" alt="Corporate Anthems"/>
+      <div class="port-over"><p class="port-cat">Music Video · Corporate</p><h3 class="port-name">Corporate Anthems</h3><div class="port-tags"><span class="port-tag">DaVinci</span><span class="port-tag">Audio Sync</span><span class="port-tag">Music Video</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('Y8g_CODA7ZA')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Fondo-Bioexpert-500x500.jpg" alt="Bioexpert"/>
+      <div class="port-over"><p class="port-cat">Spot · Health</p><h3 class="port-name">Bioexpert — Campaign</h3><div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">TV Spot</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('Nzggcmm5Du4')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Fondo-detras-de-camaras-500x500.jpg" alt="Behind the Scenes"/>
+      <div class="port-over"><p class="port-cat">BTS · Documentary</p><h3 class="port-name">Behind the Scenes — Full Production</h3><div class="port-tags"><span class="port-tag">Shotcut</span><span class="port-tag">Documentary</span><span class="port-tag">Narrative</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('jhUdFL_fvkU')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/tomas-aereas-cartagena-500x500.jpg" alt="Colombia from Above"/>
+      <div class="port-over"><p class="port-cat">Aerial · Documentary</p><h3 class="port-name">Colombia from Above</h3><div class="port-tags"><span class="port-tag">Premiere Pro</span><span class="port-tag">4K Drone</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('XvgMfxfo60Y')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Fondo-Reel-Motion-Graphics-500x500.jpg" alt="Brand Identity"/>
+      <div class="port-over"><p class="port-cat">Branding · Animation</p><h3 class="port-name">Brand Identity Reel</h3><div class="port-tags"><span class="port-tag">DaVinci</span><span class="port-tag">Motion Design</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+
+    <button class="port-item fi" onclick="openVideo('Y8g_CODA7ZA')">
+      <img class="port-thumb" src="https://render.co/wp-content/uploads/2020/05/Fondo-Bonice-Rotoscopia-500x500.jpg" alt="VFX Compositing"/>
+      <div class="port-over"><p class="port-cat">VFX · Compositing</p><h3 class="port-name">VFX Compositing Reel</h3><div class="port-tags"><span class="port-tag">DaVinci Resolve</span><span class="port-tag">VFX</span><span class="port-tag">Compositing</span></div></div>
+      <div class="port-play"><svg width="18" height="18" viewBox="0 0 18 18" fill="white"><path d="M4 2.5l12 6.5-12 6.5V2.5z"/></svg></div>
+    </button>
+  </div>
+
+  <div class="view-all-wrap">
+    <button class="btn-outline" id="toggle-more-btn" onclick="toggleMore()">
+      <span id="toggle-more-label">See more projects</span>
+      <svg id="toggle-more-icon" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 4.5l4.5 4.5 4.5-4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<section class="tools-section" id="tools">
+  <p class="s-label">Software & Skills</p>
+  <h2 class="s-title">What I work with</h2>
+  <div class="tools-grid">
+    <div class="tool-card fi">
+      <div class="tool-icon-wrap"><svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="3" fill="#00005B"/><text x="5" y="19" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#9999FF">Pr</text></svg></div>
+      <div class="tool-name">Adobe Premiere Pro</div>
+      <div class="tool-skills">
+        <span class="tool-skill">Multi-cam editing</span>
+        <span class="tool-skill">Nested sequences & effects</span>
+        <span class="tool-skill">Broadcast-ready delivery</span>
+        <span class="tool-skill">Audio mixing & sync</span>
+      </div>
+    </div>
+    <div class="tool-card fi">
+      <div class="tool-icon-wrap"><svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="3" fill="#1A0800"/><text x="4" y="19" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#FF6620">Dr</text></svg></div>
+      <div class="tool-name">DaVinci Resolve</div>
+      <div class="tool-skills">
+        <span class="tool-skill">Node-based color grading</span>
+        <span class="tool-skill">Primary & secondary correction</span>
+        <span class="tool-skill">Custom LUTs & scopes</span>
+        <span class="tool-skill">Fairlight audio mix</span>
+      </div>
+    </div>
+    <div class="tool-card fi">
+      <div class="tool-icon-wrap"><svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="3" fill="#0A1A0A"/><text x="4" y="19" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#22CC55">Sc</text></svg></div>
+      <div class="tool-name">Shotcut</div>
+      <div class="tool-skills">
+        <span class="tool-skill">Non-linear editing</span>
+        <span class="tool-skill">Keyframe animation</span>
+        <span class="tool-skill">H.265 / ProRes export</span>
+        <span class="tool-skill">Multi-track workflows</span>
+      </div>
+    </div>
+    <div class="tool-card fi">
+      <div class="tool-icon-wrap"><svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="3" fill="#001428"/><text x="4" y="19" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#3399FF">Os</text></svg></div>
+      <div class="tool-name">OpenShot</div>
+      <div class="tool-skills">
+        <span class="tool-skill">Keyframe animations</span>
+        <span class="tool-skill">Transitions & filters</span>
+        <span class="tool-skill">3D animated titles</span>
+      </div>
+    </div>
+    <div class="tool-card fi">
+      <div class="tool-icon-wrap"><svg width="26" height="26" viewBox="0 0 26 26"><rect width="26" height="26" rx="3" fill="#1A1400"/><text x="4" y="19" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#CCBB00">Lw</text></svg></div>
+      <div class="tool-name">Lightworks</div>
+      <div class="tool-skills">
+        <span class="tool-skill">Broadcast-grade editing</span>
+        <span class="tool-skill">Bin & media management</span>
+        <span class="tool-skill">Real-time effects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="clients-section" id="clients">
+  <p class="s-label" style="justify-content:center">Clients & Brands</p>
+  <h2 class="s-title" style="text-align:center">Brands I've worked with</h2>
+  <p style="text-align:center;color:var(--muted);font-size:.78rem;max-width:720px;margin:-22px auto 34px;line-height:1.8;">Official brand links for added credibility. Click any logo to open the company website.</p>
+  <div class="clients-grid fi">
+    <a class="client-card" href="https://www.quala.com.co/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Quala_logo.png/320px-Quala_logo.png" alt="Quala"/></div><span class="client-name">Quala</span></a>
+    <a class="client-card" href="https://www.henkel.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Henkel-Logo.svg/320px-Henkel-Logo.svg.png" alt="Henkel"/></div><span class="client-name">Henkel</span></a>
+    <a class="client-card" href="https://www.beiersdorf.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Beiersdorf-Logo.svg/320px-Beiersdorf-Logo.svg.png" alt="Beiersdorf"/></div><span class="client-name">Beiersdorf</span></a>
+    <a class="client-card" href="https://alpina.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Alpina_logo.svg/320px-Alpina_logo.svg.png" alt="Alpina"/></div><span class="client-name">Alpina</span></a>
+    <a class="client-card" href="https://colombina.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Logo_Colombina.png/320px-Logo_Colombina.png" alt="Colombina"/></div><span class="client-name">Colombina</span></a>
+    <a class="client-card" href="https://www.compass-group.com/en/index.html" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Compass_Group.svg/320px-Compass_Group.svg.png" alt="Compass Group"/></div><span class="client-name">Compass Group</span></a>
+    <a class="client-card" href="https://www.alianzateam.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><span style="font-family:'Playfair Display',serif;font-size:1rem;color:#111;letter-spacing:.02em">Alianza Team</span></div><span class="client-name">Alianza Team</span></a>
+    <a class="client-card" href="https://www.tiendaramo.com.co/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Ramo_logo.png/320px-Ramo_logo.png" alt="Ramo"/></div><span class="client-name">Ramo</span></a>
+    <a class="client-card" href="https://constructoracolpatria.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://constructoracolpatria.com/site/assets/img/Gaia_Log-load.png" alt="Constructora Colpatria"/></div><span class="client-name">Constructora Colpatria</span></a>
+    <a class="client-card" href="https://grupodiana.co/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://grupodiana.co/wp-content/uploads/2019/11/logo_diana.png" alt="Grupo Diana"/></div><span class="client-name">Grupo Diana</span></a>
+    <a class="client-card" href="https://restaurantemuy.com/" target="_blank" rel="noopener noreferrer"><div class="client-logo-wrap"><img class="client-logo" src="https://cdn.prod.website-files.com/5edad490415d3af51ed48281/648cd790f9151367247538a1_logo_muy%20%281%29.png" alt="MUY"/></div><span class="client-name">MUY</span></a>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="about-img-wrap fi">
+    <div class="about-img-placeholder">
+      <img src="assets/profile-photo.webp" alt="Alejandro Vega portrait" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+    </div>
+    <div class="about-frame"></div>
+  </div>
+  <div class="fi">
+    <p class="s-label">About me</p>
+    <h2 class="s-title">Video editor &<br>post-production specialist</h2>
+    <p class="about-body">
+      I'm a video editor with over 3 years of experience at
+      <strong>Render Producción Audiovisual</strong>, a Bogotá-based production house
+      with presence in 10 Latin American countries. I've worked on post-production for
+      <strong>TV commercials, product spots, motion graphics, corporate reels,
+      aerial footage and music videos</strong> for leading brands like Quala, Alpina, Colombina and more.<br><br>
+      My toolkit centers on <strong>Adobe Premiere Pro and DaVinci Resolve</strong> — covering
+      everything from assembly and fine cuts to color correction, audio mixing and
+      delivery in broadcast and digital formats.
+    </p>
+    <div class="about-stats">
+      <div><div class="stat-n">3+</div><div class="stat-l">Years at Render</div></div>
+      <div><div class="stat-n">20+</div><div class="stat-l">Projects edited</div></div>
+      <div><div class="stat-n">10</div><div class="stat-l">Countries reached</div></div>
+      <div><div class="stat-n">5</div><div class="stat-l">Software tools</div></div>
+    </div>
+    <a href="#contact" class="btn-primary">
+      Get in touch
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#080808" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <p class="s-label" style="justify-content:center">Contact</p>
+  <h2 class="contact-big">Got a<br><em>project?</em></h2>
+  <p style="font-size:.85rem;color:var(--muted);max-width:460px;margin:0 auto 48px;line-height:1.9;">
+    Available for freelance projects, post-production collaborations and positions related to digital content production.
+  </p>
+  <div class="contact-btns">
+    <a href="mailto:alejandro.vegacastellanos@gmail.com" class="btn-primary email-link">
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 1l6 4.5L13 1M1 1h12v8H1V1z" stroke="#080808" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      alejandro.vegacastellanos@gmail.com
+    </a>
+  </div>
+  <div class="contact-btns" style="margin-top:16px">
+    <a href="https://www.youtube.com/@renderproduccionaudiovisua7823/videos" target="_blank" class="btn-outline">YouTube Channel</a>
+    <a href="https://render.co" target="_blank" class="btn-outline">render.co</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 — Alejandro Vega · Video Editor · Bogotá, Colombia</p>
+  <div class="f-strip"></div>
+  <p>Projects with <a href="https://render.co" style="color:var(--gold);text-decoration:none">Render</a></p>
+</footer>
+
+<script>
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('vis');
+    });
+  }, { threshold: .08 });
+  document.querySelectorAll('.fi,.tool-card').forEach(el => obs.observe(el));
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  function openVideo(id) {
+    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideo() {
+    iframe.src = '';
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function closeModalBg(e) {
+    if (e.target === modal) closeVideo();
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeVideo();
+  });
+
+  function toggleMore() {
+    const grid = document.getElementById('more-grid');
+    const btn = document.getElementById('toggle-more-btn');
+    const label = document.getElementById('toggle-more-label');
+    const open = grid.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    label.textContent = open ? 'Show fewer' : 'See more projects';
+  }
+</script>
+</body>
+</html>
